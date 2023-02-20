@@ -1,3 +1,4 @@
+package basic;
 
 public class Identifier {
 
@@ -42,6 +43,10 @@ public class Identifier {
 		System.out.println(숫자);
 		System.out.println(名);
 		
+		
+		
+		
+				
 		
 		
 		
