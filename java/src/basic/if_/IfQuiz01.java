@@ -1,4 +1,4 @@
-package basic;
+package basic.if_;
 
 import java.net.MulticastSocket;
 import java.util.Scanner;

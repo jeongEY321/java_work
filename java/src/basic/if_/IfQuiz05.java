@@ -1,4 +1,4 @@
-package basic;
+package basic.if_;
 
 import java.util.Scanner;
 
@@ -23,26 +23,26 @@ public class IfQuiz05 {
 		do {
 			System.out.print("국어점수: ");
 			ko = sc.nextDouble();
-			if(ko > 100) {
+			if(ko > 100 || ko < 0) {
 				System.out.println("잘못입력하셨습니다.");
 			}
-		} while( ko > 100);
+		} while( ko > 100 || ko < 0);
 
 		do {
 			System.out.print("영어점수: ");
 			en = sc.nextDouble();
-			if(en > 100) {
+			if(en > 100 || en < 0) {
 				System.out.println("잘못입력하셨습니다.");
 			}
-		} while( en > 100);
+		} while( en > 100 || en < 0);
 
 		do {
 			System.out.print("수학점수: ");
 			ma = sc.nextDouble();
-			if(ma > 100) {
+			if(ma > 100 || ma < 0) {
 				System.out.println("잘못입력하셨습니다.");
 			}
-		} while( ma > 100);
+		} while( ma > 100 || ma < 0);
 
 		po = (ko + en + ma) / 3;
 
@@ -50,17 +50,17 @@ public class IfQuiz05 {
 		System.out.printf("평균 점수: %.1f점\n", po);
 
 		if(po >= 95) {
-			System.out.println("당신의 학점은 A+ 입니다.");
+			System.out.println("당신의 학점은 A+입니다.");
 		} else if(po >= 90) {
-			System.out.println("당신의 학점은 A0 입니다.");
+			System.out.println("당신의 학점은 A0입니다.");
 		} else if(po >= 80) {
-			System.out.println("당신의 학점은 B 입니다.");
+			System.out.println("당신의 학점은 B입니다.");
 		} else if(po >= 70) {
-			System.out.println("당신의 학점은 C 입니다.");
+			System.out.println("당신의 학점은 C입니다.");
 		} else if(po >= 60) {
-			System.out.println("당신의 학점은 D 입니다.");
+			System.out.println("당신의 학점은 D입니다.");
 		} else {
-			System.out.println("당신의 학점은 F 입니다.");
+			System.out.println("당신의 학점은 F입니다.");
 		}
 
 		sc.close();
