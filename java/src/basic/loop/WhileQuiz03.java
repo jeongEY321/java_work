@@ -21,7 +21,7 @@ public class WhileQuiz03 {
 			System.out.printf("%dX%d=%d\n", num, numm, num*numm);
 			numm++;
 		}
-		
+		sc.close();
 		
 		
 		

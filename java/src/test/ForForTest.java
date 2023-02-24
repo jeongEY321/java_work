@@ -20,6 +20,7 @@ public class ForForTest {
 		int num = sc.nextInt();
 		int count = 0; //소수의 개수를 새주는놈.
 		
+		System.out.print("1 ");
 		for(int i = 1; i <= num; i++) {
 			int cnt=0;//소수인지 판별해주는놈.
 			for(int j = 1; j<=i; j++) {
@@ -31,8 +32,9 @@ public class ForForTest {
 				System.out.printf("%d ",i);
 				count++;
 			}
-		}System.out.printf("\n소수의 개수: %d개",count);
+		}System.out.printf("\n소수의 개수: %d개",count+1);
 		
+		sc.close();
 		
 		
 		

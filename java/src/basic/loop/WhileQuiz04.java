@@ -22,7 +22,7 @@ public class WhileQuiz04 {
 		}
 		System.out.printf("%d의 약수의 종합: %d\n",a, to);
 
-
+		sc.close();
 
 
 

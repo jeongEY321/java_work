@@ -46,6 +46,7 @@ public class SwitchQuiz01Plus {
 		
 		if(flag) {
 			System.out.printf("%d %s %d = %d\n", num1, operator, num2, result);			
+		sc.close();
 		}
 	}
 

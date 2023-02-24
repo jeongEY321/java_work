@@ -41,7 +41,7 @@ public class IfQuiz02 {
 			System.out.println("두 정수는 같습니다.");
 		}
 		
-		
+		sc.close();
 		
 				
 		
