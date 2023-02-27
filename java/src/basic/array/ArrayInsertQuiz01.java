@@ -28,7 +28,7 @@ public class ArrayInsertQuiz01 {
 		String[] foods = new String [50];
 
 		System.out.println("배불러를 입력하시면 종료됩니다.");
-		out : for(int i =0; i<foods.length; i++) {
+		out: for(int i =0; i<foods.length; i++) {
 			System.out.print("먹고싶은 음식 이름: ");
 			String name = sc.next();
 
@@ -38,33 +38,14 @@ public class ArrayInsertQuiz01 {
 					i -= 1;
 					continue out;
 				}
-			}
-
-			if(name.equals("배불러")) {
-				break;
-			}
+			} if(name.equals("배불러")) break;
 			foods[i]=name;
-			
 		}
 		System.out.print("입력받은 음식: ");
 		for(String n : foods) {
 			if (n == null) continue;
 			System.out.print(n + " ");
-
-
-		}
-
-
-
-
-
-
-
-
-
-
-
-		sc.close();
+		} sc.close();
 	}
 
 }

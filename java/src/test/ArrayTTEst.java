@@ -1,9 +1,11 @@
 package test;
 
+import java.util.Scanner;
+
 public class ArrayTTEst {
 
 	public static void main(String[] args) {
-		
+
 		/*
         1. String 배열을 생성하세요. (foods)
         크기는 넉넉하게 50개로 지정하겠습니다.
@@ -21,13 +23,29 @@ public class ArrayTTEst {
 		'이미 존재하는 음식입니다.'를 출력하고
 		다시 새로운 음식을 입력받을 수 있또록 코드를 제어해 보세요.
 		 */
-		
-		
-		
-		
-		
-		
-		
+
+		Scanner sc = new Scanner(System.in);
+		String[] food = new String [50];
+		System.out.println("'배불러'를 임력하시면 입력을 종료합니다.");
+		out: for(int i = 0; i < food.length; i++) {
+			System.out.print("음식: ");
+			String name = sc.next();
+
+			for(int j =0; j<i; j++) {
+				if(name.equals(food[j])) {
+					System.out.println("이미 존재하는 음식입니다.");
+					i -= 1;
+					continue out;
+				}
+			}
+			if(name.equals("배불러")) break;
+			food[i] = name;
+		} System.out.print("선택하신 음식: ");
+		for(String n : food) {
+			if(n == null) {
+				continue;
+			} System.out.print( n +" ");
+		} sc.close();
 	}
 
 }
