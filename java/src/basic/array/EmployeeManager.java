@@ -22,6 +22,19 @@ public class EmployeeManager {
 		 신규 등록, 정보 몱록, 정보 수정, 사원 삭제, 프로그램 종료
 		 */
 		int i=0;
+
+
+		//		for(int m=0; m<99; m++) {
+		//			userNums[m] = String.valueOf(m);
+		//			names[m] =String.valueOf(m);
+		//			ages[m] = m;
+		//			departments[m] = String.valueOf(m);
+		//			count++;
+		//		}   //99까지 자동 채워주기
+
+		//		System.out.println(count); //카운트 확인용.
+
+
 		while(true) {
 			System.out.println("-------------사원 관리 프로그램-----------");
 			System.out.println("# 1. 사원 정보 신규 등록");
@@ -30,6 +43,7 @@ public class EmployeeManager {
 			System.out.println("# 4. 사원 정보 수정");
 			System.out.println("# 5. 사원 정보 삭제");
 			System.out.println("# 6. 프로그램 종료");
+
 
 			System.out.print("메뉴 입력: ");
 			int menu = sc.nextInt();
@@ -63,6 +77,7 @@ public class EmployeeManager {
 					ages[i] = sc.nextInt();
 					System.out.print("부서명: ");
 					departments[i] = sc.next();
+					System.out.println(names[i] + "님의 정보가 정상 입력 되었습니다.");
 					i++;
 					count++;
 					break;
@@ -76,8 +91,8 @@ public class EmployeeManager {
 					System.out.println("등록된 사원 정보가 없습니다.");
 					continue;
 				} for(i =0; i<count; i++) {
-					System.out.printf("사번: %s 이름: %s 나이: %d 부서명: %s \n"
-							, userNums[i], names[i], ages[i], departments[i]);
+					System.out.printf("%d사번: %s 이름: %s 나이: %d 부서명: %s \n"
+							, i+1, userNums[i], names[i], ages[i], departments[i]);
 
 				}
 				continue;
@@ -144,18 +159,20 @@ public class EmployeeManager {
 				//앞으로 한칸씩 땡기신 다음 count를 하나 내려주시면 됩니다.
 				System.out.print("사원번호를 입력해주세요: ");
 				String de = sc.next();
+				boolean flag = false;
 				for(int q=0; q<count; q++) {
 					if(de.equals(userNums[q])) {
+						flag = true;
 						System.out.println("정말 삭제하시겠습니까? [Y/N]");
 						System.out.print("> ");
 						String choi = sc.next();
 						if(choi.equals("Y")) {
-							for(int w=q; w<userNums.length-1; w++) {
-								if(count == 99) {
-									userNums[100] = null;
-									names[100] = null;
-									ages[100] = 0;
-									departments[100] = null;
+							for(int w=q; w<count; w++) {
+								if(w == userNums.length-1) {
+									userNums[w] = null;
+									names[w] = null;
+									ages[w] = 0;
+									departments[w] = null;
 									break;
 								} else {
 									userNums[w]=userNums[w+1];
@@ -163,14 +180,24 @@ public class EmployeeManager {
 									ages[w]=ages[w+1];
 									departments[w]=departments[w+1];
 								}
-								count--;
-								continue;
+
 							}
+							System.out.println("삭제가 정상적으로 진행되었습니다.");
+							i--;
+							count--;
+							continue;
+
 						} else if(choi.equals("N")) {
 							System.out.println("취소합니다.");
 							break;
 						}
+					} else {
+						System.out.println("Y / N 중 골라주세요.");
 					}
+				}
+				if(!flag) {
+					System.out.println("일치하는 사원번호가 없습니다.");
+					continue;
 				}
 
 
