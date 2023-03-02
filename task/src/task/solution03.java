@@ -1,0 +1,69 @@
+package task;
+
+import java.util.Scanner;
+
+public class solution03 {
+
+	public static void main(String[] args) {
+		/*
+		문제:
+			scores 배열에 존재하는 점수에 순위를 매겨서 출력하는 프로그램 입니다.
+
+		입력: 
+			Scanner를 활용하여 총 5개의 점수를 입력받습니다.
+			타입은 정수 타입이며 scores 배열에 순서대로 삽입합니다.
+			점수의 순서는 정해진 것이 없습니다만 중복은 허용하지 않는다고 가정합니다.
+			ex) 85 100 35 47 90 
+
+		출력:
+			ex) 
+			점수    		순위
+			--------------------------
+			85		3
+			100		1
+			35		5
+			47		4
+			90		2
+
+			의 형태로 출력합니다. 점수와 순위의 간격은 적절하게 띄워 주시면 되겠습니다.
+		 */
+
+		Scanner sc = new Scanner(System.in);
+		int[] scores = new int[5];
+		int[] ranks = new int[5];
+
+		for(int i =0; i < scores.length; i++) {
+			System.out.print("점수: ");
+			scores[i] = sc.nextInt();
+		}
+		sc.close();
+		System.out.println("-----------------------");
+		System.out.println("점수 \t순위");
+		System.out.println("-----------------------");
+		int count = 0, a=0, b=0, i, c=0, d=0;
+		for(i =0; i< scores.length; i++) {
+			if(scores[0] <= scores[i]) {
+				count++;
+			}if(scores[1] <= scores[i]) {
+				a++;
+			}if(scores[2] <= scores[i]) {
+				b++;
+			}if(scores[3] <= scores[i]) {
+				c++;
+			}if(scores[4] <= scores[i]) {
+				d++;
+			}
+		}
+		ranks[0] = count;
+		ranks[1] = a;
+		ranks[2] = b;
+		ranks[3] = c;
+		ranks[4] = d;
+
+		for(int j =0; j<scores.length; j++) {
+			System.out.println(scores[j] + "\t" + ranks[j]);
+		}
+
+	}
+
+}

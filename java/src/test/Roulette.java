@@ -51,10 +51,10 @@ public class Roulette {
 		//false -> true로 바꾸는 것이 실탄 장전입니다.
 		//난수는 중복으로 발생할 가능성이 있기 때문에 중복 방지 로직을 세워서
 		//같은 위치에 두개의 실탄이 장전되지 않도록 해 주시면 됩니다.
-		System.out.print("실탄 개수(1~5): ");
+		System.out.printf("실탄 개수(1~%d): ", numb.length-1);
 		int count = sc.nextInt();
 
-		if(count < 1 || count > 5) {
+		if(count < 1 || count >= numb.length) {
 			System.out.println("실탄 수가 올바르지 않습니다. 게임을 종료합니다.");
 			sc.close();
 			return;
@@ -110,12 +110,12 @@ public class Roulette {
 		while(true) {
 
 
-			System.out.printf("\n\n[%s의 턴!]\t탄창을 장전했습니다.\n", numb[startnum]);
-			System.out.println("# 엔터를 누르면 격발합니다!");
+			System.out.printf("\n\n[%s님의 턴입니다.]\n", numb[startnum]);
+			System.out.println("'ENTER'을(를)누르시면 격발합니다.");
 			sc.nextLine();
 
 			if(bulletPos[realBulletPos]) { //총알 격발!
-				System.out.printf("\n빵!!!\n[%s] 사망...\n", numb[startnum]);
+				System.out.printf("\n빵!!!\n[%s]님이 죽으셨습니다.\n", numb[startnum]);
 				count--;
 				num--;
 				bulletPos[realBulletPos] = false; //총알이 소모되었으니 false로 변경.
@@ -149,7 +149,7 @@ public class Roulette {
 				}
 
 			} else { // false였기 때문에 생존.
-				System.out.println("휴.. 살았습니다.");
+				System.out.println("생존하셨습니다.");
 				startnum++;
 			}
 			//플레이어가 생존할 때마다 startnum의 값을 하나씩 올리고 있는데
