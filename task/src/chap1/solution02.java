@@ -1,4 +1,4 @@
-package task;
+package chap1;
 
 public class solution02 {
 
