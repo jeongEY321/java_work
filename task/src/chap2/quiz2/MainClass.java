@@ -19,8 +19,8 @@ public class MainClass {
 		c.setSpeed(100);
 		System.out.println("-----------------");
 		c.engineStop();
-		c.setSpeed(0);
 		System.out.println("-----------------");
+		c.setSpeed(0);
 		c.mode = 'P';
 		c.engineStop();
 		

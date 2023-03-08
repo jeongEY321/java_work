@@ -4,10 +4,6 @@ import java.util.Arrays;
 
 public class StringMethod {
 
-	
-	
-	
-	
 	public static void main(String[] args) {
 		
 		String str = "Hello java";
@@ -83,42 +79,6 @@ public class StringMethod {
 		System.out.println(3 + 4);
 		System.out.println(String.valueOf(3) + String.valueOf(4));
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
