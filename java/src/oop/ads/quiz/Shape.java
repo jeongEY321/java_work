@@ -19,17 +19,15 @@ public abstract class Shape {
 		this.name = name;
 	}
 	
-	
 	public abstract double getArea();
 	
-	
-
-
 	public void getName() {
 		System.out.println("도형이름: " + this.name );
 	}
 	
-	
+	public void setName(String name) {
+		this.name = name;
+	}
 	
 	
 	

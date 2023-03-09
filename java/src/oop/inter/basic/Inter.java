@@ -1,10 +1,12 @@
-package oop.inter;
+package oop.inter.basic;
+
+
 
 //인터페이스: 객체의 규격(기능)을 표준화해서 명세하는 역할.
-public interface Inter {
+public interface Inter extends ParentInter {
 	
 	//인터베이스에서 변수를 선언하면 상수(static final)로 지정됩니다.
-	int n = 5;
+	int NUM = 5;
 	
 //	Inter() {
 //		
@@ -14,9 +16,10 @@ public interface Inter {
 	//인터페이스에서 메서드를 선언하면 추상 메서드로 지정됩니다.
 	void method1();
 	
-	
-	
-	
+	public static void staticMEthod() {
+		System.out.println("가능합니다~");
+	}
+
 	
 	
 	

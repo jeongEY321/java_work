@@ -9,7 +9,7 @@ double radius;
 
 	@Override
 	public double getArea() {
-		double ans = this.radius *  this.radius * Math.PI;
+		double ans = radius *  radius * Math.PI;
 		return ans;
 		
 	}

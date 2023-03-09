@@ -9,7 +9,7 @@ double side;
 
 	@Override
 	public double getArea() {
-		double ans = this.side * this.side; 
+		double ans = side * side; 
 		return ans;
 	}
 
