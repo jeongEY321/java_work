@@ -46,11 +46,11 @@ public class Score {
 		this.me = me;
 	}
 	public int getTot() {
-		this.tot = this.ko + this.en + this.me;
+		tot = ko + en + me;
 		return tot;
 	}
 	public double getAver() {
-		this.aver = (this.ko + this.en + this.me)/3.0;
+		aver = (ko + en + me)/3.0;
 		return aver;
 	}
 

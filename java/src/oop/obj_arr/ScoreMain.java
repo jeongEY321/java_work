@@ -32,6 +32,7 @@ public class ScoreMain {
 			String name = sc.next();
 			if(name.equals("그만")) {
 				System.out.println("----------------------");
+				sc.close();
 				break;
 			
 			}
@@ -58,8 +59,7 @@ public class ScoreMain {
 		
 		
 		
-		
-		
+		sc.close();
 		
 	}
 
