@@ -28,17 +28,17 @@ public class ArraysQuiz {
 		String[] participant = {"홍길동", "김길동", "김철수", "최철수", "박영희"};
 		String[] completion = {"홍길동", "김길동", "김철수", "박영희"};
 
-		System.out.println(solution(participant, completion));
+		System.out.println("미완주 선수: " + solution(participant, completion));
 
-
-
-
-
-
-
-
-
-
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
